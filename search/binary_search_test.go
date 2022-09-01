@@ -18,3 +18,13 @@ func TestBinarySearchFindsExistingElement(t *testing.T) {
 		t.Error("Binary search didn't find the correct element")
 	}
 }
+
+func TestBinarySearchDoesNotFindMissingElement(t *testing.T) {
+	ints := []int16{1, 10, 100, 1000}
+	target := 5
+
+	findResult := BinarySearch(ints, int16(target))
+	if findResult != nil {
+		t.Error("Binary search found a nonexistent element")
+	}
+}
