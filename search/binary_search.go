@@ -5,7 +5,7 @@ import (
 )
 
 // returns the index of searchTarget in sortedInts, or nil if it's not present
-func BinarySearch(sortedInts []int16, searchTarget int16) *int {
+func BinarySearch(sortedInts []uint8, searchTarget uint8) *int {
 	if !sort.SliceIsSorted(sortedInts, func(i, j int) bool {
 		return sortedInts[i] < sortedInts[j]
 	}) {
